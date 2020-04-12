@@ -6,8 +6,8 @@ by Matty Mariansky
 
 //model paths, make sure they match inside Runway
 //if they are both the same in Runway, start them, and one will update
-const faceParserPath = "http://localhost:8001/query";
-const spadeFacePath = "http://localhost:8000/query";
+const faceParserPath = "http://localhost:8000/query";
+const spadeFacePath = "http://localhost:8001/query";
 
 //set to false it you want Runway to save the images you produce (you can then also set it to save video)
 const saveImages = true;
@@ -19,12 +19,12 @@ let segmentation, segmentationImg;
 let weHaveFace = false;
 let weHaveSegmentation = false;
 let counter = 0;
-let imageCount = 5; //how many images to produce
+let imageCount = 500; //how many images to produce
 
 function preload() {
   //load a face file to start with, use it for the style face too
   //assuming this is a 512x512px size
-  realFace = loadImage("assets/dudea.png");
+  realFace = loadImage("assets/girlb.png");
 }
 
 function setup() {
@@ -53,7 +53,7 @@ function draw() {
     image(segmentationImg, 0, 0);
     segmentation = get(); //convert element to img
     if (saveImages) {
-      segmentation.save("segment" + nf(counter, 4, 0), "png");
+      //segmentation.save("segment" + nf(counter, 4, 0), "png");
     }
     weHaveSegmentation = false;
     generateFace();
