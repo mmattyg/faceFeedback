@@ -19,12 +19,12 @@ let segmentation, segmentationImg;
 let weHaveFace = false;
 let weHaveSegmentation = false;
 let counter = 0;
-let imageCount = 500; //how many images to produce
+let imageCount = 800; //how many images to produce
 
 function preload() {
   //load a face file to start with, use it for the style face too
   //assuming this is a 512x512px size
-  realFace = loadImage("assets/girlb.png");
+  realFace = loadImage("assets/dudea.png");
 }
 
 function setup() {
@@ -41,7 +41,7 @@ function draw() {
     image(realFaceImg, 0, 0);
     realFace = get(); //convert element to img
     if (saveImages) {
-      realFace.save("face" + nf(counter, 4, 0), "png");
+      realFace.save("dudea" + nf(counter, 4, 0), "png");
     }
     weHaveFace = false;
     if (counter < imageCount) {
