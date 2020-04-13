@@ -15,6 +15,7 @@ Use Face-Parser inside Runway to segment to face parts:
 ![](assets/dude_segments.png)
 
 And now feed the segmentation into SPADE-FACE to turn them back into a "real" face, that you can send back again to Face-Parser.
+The code saves the frames into your local drive (as browser download). You can also use Runway's own Video or Image export.
 
 ## Requirements
 
